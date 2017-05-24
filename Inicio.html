@@ -1,0 +1,105 @@
+<html>    
+    <head>
+        <title>BlogApp</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet"> 
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="estilos.css">
+        <script type="text/javascript" src="funciones.js"></script>
+    </head>
+    <body>
+      <div class="container-fluid">
+            <div class="row" id="header">
+                    <nav id="banner" class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin-bottom: 0px;">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#" id="UsrIcon">Unknown</a>
+                                <button id="DespBtn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex6-collapse" aria-expanded="false">
+                                    <span class="sr-only">Desplegar navegación</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar btn-block"></span>
+                                </button>
+                            </div>
+                            <div id="MenuBtn" class="navbar-collapse collapse navbar-ex6-collapse" aria-expanded="false" style="height: 1px;">
+                                <ul class="nav navbar-nav">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#postCont">Post</a></li>
+                                <li><a href="#ContactContainer">Contact</a></li>
+                                </ul>
+                                <button id="post" class="btn btn-primary navbar-btn" style="margin-bottom: 0px;">New Post</button>
+                            </div>
+                    </nav>
+                </div>
+                <div id="home" class="intro hero-bg col-lg-offset-1 col-md-offset-1 col-sm-12 col-md-10 col-lg-10 col-xs-12">  
+                    <div id="TextTitle">
+                        <h1 id="HomeTitle" class="text-center"><strong> Blog Application</strong></h1>
+                        <center><hr id="hrHome"></center>
+                        <p  class="text-center" id="HomeSubTitle">Express your ideas</p>
+                    </div>
+                </div>
+                <div id="postCont" class="col-lg-offset-1 col-md-offset-1 col-sm-12 col-md-10 col-lg-10 col-xs-12">
+                    <div id="content">
+                        <div id="contentHeader">
+                            <h1 class="text-center" style="margin: 0px;">SAMPLE POST</h1>
+                            <hr class="hrCont">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="carga" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true"> 
+                    <div align="center" style="margin-top: 250px;"><img class="img-responsive img-center" src='./imgs/ajax_loader.gif' style='width: 10%;'></div>
+                </div>
+                <div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h3>Write New Post</h3>
+                                </div>
+                            <div class="modal-body">
+                                   <input type="text" class="form-control" id="titleTxt" placeholder="Post Title" style="margin:5px;"required>
+                                   <input type="text" class="form-control" id="headerTxt" placeholder="Post Header" style="margin:5px;"required>
+                                   <textarea class="form-control" id="postText" placeholder="Post Text" rows="5" require></textarea>
+                            </div>
+                                <div class="modal-footer">
+                                    <button id="guardar" class="btn btn-primary btn-block">Post</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div id="ContactContainer" class="col-lg-offset-1 col-md-offset-1 col-sm-12 col-md-10 col-lg-10 col-xs-12">                   
+                    <h1 class="text-center" style="margin: 0px; padding-top: 50px;">CONTACT</h1>
+                    <hr class="hrCont">
+                   <div class="col-lg-offset-2 col-sm-6 col-md-6 col-lg-4 col-xs-6">
+                        <input class="form-control" type"text" id="nametxt" style="margin:5px;"  placeholder="Name" required>
+                        <input class="form-control" type"email" id="mailtxt" placeholder="E-Mail" style="margin:5px;" required>
+                        <input class="form-control" type="tel" id="numbertxt" style="margin:5px;" placeholder="Phone Number">
+                        <textarea class="form-control" id="message" placeholder="Message"  rows="5" require></textarea>
+                        <button class="btn btn-primary btn-block" style="margin:5px;" id="send-btn">Send</button>  
+                    </div>
+                    <p class="col-sm-6 col-md-6 col-lg-4 col-xs-6" id="message-parraf"><strong> to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for some nice... just feel free to drop me a line anytime.</strong></p>
+                </div>
+            </div>
+            <div id="AboutPage" class="container-fluid col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6 text-center">
+                        <h1>ABOUT THIS PAGE</h1>
+                        <p><strong>This application was made by Ivan Bonfigli for the LabIII exam</strong></p>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+                        <h1>AROUND THE WEB</h1>
+                        <ul style="list-style:none;">
+                            <li class="SocialLi"><a rel="nofollow" class="button social" href="#"><i class="fa fa-fw fa-linkedin" style="font-size: 36px; color: white;"></i></a></li>
+                            <li class="SocialLi"><a rel="nofollow" class="button social" href="#"><i class="fa fa-fw fa-github" style="font-size: 36px; color: white;"></i></a></li>
+                            <li class="SocialLi"><a rel="nofollow" class="button social" href="#"><i class="fa fa-fw fa-instagram" style="font-size: 36px; color: white;"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p class="text-center" style="background-color:black; color:white; margin:0px;">IvanBonfigli © 2017.</p>
+            </footer>
+    </body>
+</html>

@@ -20,7 +20,7 @@ $(document).ready(function(){
         {
            localStorage.setItem("email",mail);
 		   localStorage.setItem("preferencias",retorno.preferencias);
-           window.location.replace("index.html");
+           window.location.replace("inicio.html");
         } 
 
         });
